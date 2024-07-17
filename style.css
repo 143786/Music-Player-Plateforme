@@ -63,12 +63,38 @@ header .menu-side .playlist h4 {
   cursor: pointer;
   color: #aba8af;
   transition: 0.3s linear;
+  display: flex;
+  align-items: center;
 }
 
 header .menu-side .playlist h4:hover {
   color: #fff;
 }
 
-header .menu-side .playlist h4:hover {
-  color: #fff;
+header .menu-side .playlist h4 span {
+  position: relative;
+  margin-right: 35px;
+}
+
+header .menu-side .playlist h4 span::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border: 2px solid #aba8af;
+  border-radius: 50%;
+  top: -4px;
+  transition: 0.3s linear;
+}
+
+header .menu-side .playlist h4:hover span::before {
+  border: 2px solid #fff;
+}
+
+header .menu-side .playlist h4 .bi {
+  display: none;
+}
+
+header .menu-side .playlist .active {
+  color: #ff3399;
 }
